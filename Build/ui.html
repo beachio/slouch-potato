@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NUWE Integrations </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='stylesheets/main.css'>
+<link rel='stylesheet' href='Build/stylesheets/main.css'>
+<link rel='stylesheet' href='Build/stylesheets/main.css.map'>
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+<div class='ui-kit'>
+  <section class='main colored'>
+    <div class='container'>
+      <div class='vertically-centred-content'>
+        <h1>
+          Nuwe landing UI-kit
+        </h1>
+        <h2>
+          Structure:
+        </h2>
+        <p>
+          Index.html is divided on sections that includes via
+          <code>&lt;!&dash;&dash; @inсlude _partial_name &dash;&dash;&gt;</code>
+          tag
+        </p>
+        <p>
+          Partial for content stores in
+          <code>partials/screens</code>
+          folder, also custom styles for each stores in
+          <code>stylesheets/screens</code>
+        </p>
+        <p>
+          UI elemens defined separately and stores in
+          <code>stylesheets/elements</code>
+          folder
+        </p>
+        <p>
+          <code>.main</code>
+          defines fullscreen gradient block
+        </p>
+        <p>
+          <code>.container</code>
+          wrapper is necessary, to give content max-width (1280px)
+        </p>
+        <p>
+          Colors and some sizes can be customized in
+          <code>_settings.sass</code>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class='container'>
+      <h2>
+        UI-elements:
+      </h2>
+      <!-- Section title -->
+<div class="element">
+  <div class="section-title">
+    Section title
+  </div>
+</div>
+
+
+<!-- Columns -->
+<div class="element">
+  <h2> Columns </h2>
+  <div class="row dev">
+    <div class="column dev">
+      <img src='http://placehold.it/400x300' width='400' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/400x300' width='400' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/400x300' width='400' height='300' alt='Placeholder Image' />
+    </div>
+  </div>
+  <div class="row dev">
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+  </div>
+</div>
+
+<!-- Centered text -->
+<div class="element">
+  <p class="centered">
+    Some centered paragraph of text.
+    At Nuwe, we understand that there is no one single solution. So we make it as easy as possible to use all of them, regardless of the platform, device or services you want to support.
+  </p>
+</div>
+
+<!-- Button -->
+<div class="element">
+  <div class="btn">
+    Some button
+  </div>
+</div>
+
+
+<!-- Text input -->
+<div class="element">
+  <input type="text" name="email" placeholder="enter your email + hit enter to get early access">
+  <label> Plans start at $9 per month </label>
+</div>
+
+    </div>
+  </section>
+  <section class='colored' style='background-color: #bd10e0'>
+    <div class='container'>
+      <h2>
+        UI-elements on colored bg:
+      </h2>
+      <!-- Section title -->
+<div class="element">
+  <div class="section-title">
+    Section title
+  </div>
+</div>
+
+
+<!-- Columns -->
+<div class="element">
+  <h2> Columns </h2>
+  <div class="row dev">
+    <div class="column dev">
+      <img src='http://placehold.it/400x300' width='400' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/400x300' width='400' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/400x300' width='400' height='300' alt='Placeholder Image' />
+    </div>
+  </div>
+  <div class="row dev">
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+
+    <div class="column dev">
+      <img src='http://placehold.it/300x300' width='300' height='300' alt='Placeholder Image' />
+    </div>
+  </div>
+</div>
+
+<!-- Centered text -->
+<div class="element">
+  <p class="centered">
+    Some centered paragraph of text.
+    At Nuwe, we understand that there is no one single solution. So we make it as easy as possible to use all of them, regardless of the platform, device or services you want to support.
+  </p>
+</div>
+
+<!-- Button -->
+<div class="element">
+  <div class="btn">
+    Some button
+  </div>
+</div>
+
+
+<!-- Text input -->
+<div class="element">
+  <input type="text" name="email" placeholder="enter your email + hit enter to get early access">
+  <label> Plans start at $9 per month </label>
+</div>
+
+    </div>
+  </section>
+</div>
+
+
+
+    <script src='javascript/plugins.js'></script>
+<script src='Build/javascript/plugins.js'></script>
+    <script src='javascript/main.js'></script>
+<script src='Build/javascript/main.js'></script>
+  </body>
+</html>
+</div>
+
+
+
+    
+    
+  </body>
+</html>

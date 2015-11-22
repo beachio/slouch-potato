@@ -1,0 +1,74 @@
+
+/ Support declaration
+
+- support = [ {name: "23 and Me",      supported: [0,0,1,0]},
+              {name: "Body Media",     supported: [0,1,1,0]},
+              {name: "Fit Bit",        supported: [0,1,1,0]},
+              {name: "MylGlucoHealth", supported: [0,1,0,0]},
+              {name: "My Fitness Pal", supported: [1,0,1,0]},
+              {name: "Garmin",         supported: [1,1,1,0]},
+              {name: "Jawbone",        supported: [1,1,1,0]},
+              {name: "Fat Secret",     supported: [0,1,1,1]},
+              {name: "Strava",         supported: [1,1,1,1]},
+              {name: "Moves",          supported: [0,1,1,0]},
+              {name: "Moveable",       supported: [0,1,1,0]},
+              {name: "Map My Fitness", supported: [1,1,1,1]},
+              {name: "Runkeeper",      supported: [1,1,1,1]},
+              {name: "Misfit",         supported: [0,0,1,0]},
+              {name: "iHealth",        supported: [1,1,1,0]},
+              {name: "Vita Doc",       supported: [0,1,1,0]},
+              {name: "Daily Mile",     supported: [0,1,1,0]},
+              {name: "Fit Bug",        supported: [0,1,1,0]},
+              {name: "Fleetly",        supported: [0,1,0,0]},
+              {name: "Nike +",         supported: [1,1,0,1]},
+              {name: "Withings",       supported: [1,1,1,1]},
+              {name: "ManageBGL",      supported: [0,1,0,0]},
+              {name: "Omron",          supported: [0,1,0,0]},
+              {name: "TelCare",        supported: [0,1,0,0]},
+              {name: "Android Wear",   supported: [0,0,0,1]},
+              {name: "Runtastic",      supported: [0,0,0,1]},
+              {name: "Noom Coach",     supported: [1,0,0,1]},
+              {name: "PlexFit for Pebble", supported: [0,0,0,1]},
+              {name: "MyTracks",       supported: [0,0,0,1]},
+              {name: "Polar",          supported: [0,0,0,1]}]
+
+
+.comparison
+  .container
+    .row.comparison-logos
+      .spacer
+      .comparison-logo
+        %img{:src => "<!-- @path hk.png -->"}
+      .comparison-logo
+        %img{:src => "<!-- @path ha.png -->"}
+      .comparison-logo
+        %img{:src => "<!-- @path gf.png -->"}
+
+    .row.comparison-header
+      .comparison-description
+        Supported services
+      .comparison-name
+        Health Kit
+      .comparison-name
+        Human API
+      .comparison-name
+        Google Fit
+
+    .column.support-table
+      - support.each do |s|
+        .row.service
+          .service-name= s[:name]
+          .support
+            %div{:class => "#{s[:supported][0]==1 ? 'smiley' : 'sad'}"}
+          .support
+            %div{:class => "#{s[:supported][2]==1 ? 'smiley' : 'sad'}"}
+          .support
+            %div{:class => "#{s[:supported][3]==1 ? 'smiley' : 'sad'}"}
+
+
+    .btn Integrate with Nuwe
+
+    %p.centered
+      Did we miss something?
+      %a{:href => "#"} Let us know
+

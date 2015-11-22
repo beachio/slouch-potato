@@ -1,0 +1,26 @@
+.main
+  .container
+    .main-content
+      .main-content-text
+        .main-content-slogan
+          Reward <strong>healthy behaviour</strong>. Prevent unhealthy habits.
+
+        .main-content-description
+          SlouchPotato is a Parental Control Framework which allows you to control your kids access to games and TV shows according to healthy habits
+
+        %form{:action => "/subscribe-url", :data => { :forge_name => "register"}}
+          %input{:name => "email", :placeholder => "Enter email to support our campaign", :type => "text", :data => { :forge_name => "email" }}
+          %label A Framework for Game Developers, Supported by Parents
+      .main-content-image
+        .main-logo
+          %img.logo-image{:src => "<!-- @path logo.png -->"}
+          .beta-badge
+            %p.beta CONCEPT
+        .main-image
+          .dude-character
+            .dude-arm
+            .dude-arm-left
+            .dude-eye
+            .dude-highlight
+            .screen-highlight
+          

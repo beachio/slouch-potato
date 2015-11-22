@@ -1,0 +1,50 @@
+<!-- @include _var -->
+<!-- @include _head -->
+.ui-kit
+  %section.main.colored
+    .container
+      .vertically-centred-content
+        %h1
+          Nuwe landing UI-kit
+        %h2
+          Structure:
+        %p
+          Index.html is divided on sections that includes via
+          %code &lt;!&dash;&dash; @inсlude _partial_name &dash;&dash;&gt;
+          tag
+        %p
+          Partial for content stores in
+          %code partials/screens
+          folder, also custom styles for each stores in
+          %code stylesheets/screens
+        %p
+          UI elemens defined separately and stores in
+          %code stylesheets/elements
+          folder
+        %p
+          %code .main
+          defines fullscreen gradient block
+        %p
+          %code .container
+          wrapper is necessary, to give content max-width (1280px)
+        %p
+          Colors and some sizes can be customized in
+          %code _settings.sass
+  %section
+    .container
+      %h2
+        UI-elements:
+      <!-- @include  ui-comonents -->
+  %section.colored{:style => "background-color: #bd10e0"}
+    .container
+      %h2
+        UI-elements on colored bg:
+      <!-- @include  ui-comonents -->
+<!-- @include _footer -->
+
+</div>
+
+
+
+
+<!-- @include _footer -->

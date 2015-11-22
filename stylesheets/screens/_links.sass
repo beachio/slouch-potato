@@ -1,0 +1,88 @@
+.footer
+  background: $blue
+  color: $white
+  text-align: left
+
+  .container
+    padding: 40px
+    margin: 0 auto
+    position: relative
+
+    +clearfix
+
+  .links
+
+    display: block
+    float: left
+    +clearfix
+    margin-top: 20px
+
+    +mobile
+      float: none
+
+    +hd
+      margin-left: Rem(64)
+      margin-top: 0
+
+    .col
+      float: left
+      +clearfix
+      width: Rem(200)
+      +mobile
+        display: block
+        float: none
+
+    a
+      color: white
+      display: block
+      text-align: left
+      +bold(1rem,1.9rem)
+      +mobile
+        font-size: 14px
+        margin-bottom: 5px
+      &:hover
+        color: $dark-blue
+      +hd
+        margin-right: 40px
+        display: block
+  .registration_address
+
+    text-align: right
+    color: white
+    position: absolute
+    top: 40px
+    right: 10px
+    +mobile
+      position: static
+      text-align: left
+      margin-top: 25px
+    +hd
+      position: static
+      float: right
+    font-size: 1rem
+    line-height: 1.4rem
+    img
+      margin-bottom: 17px
+
+
+  .social_icons
+    padding-top: 5px
+    text-align: left
+    +hd
+      float: left
+    a
+      width: 27px
+      height: 27px
+      display: inline-block
+      margin-right: 23px
+      &.github_icon
+        background: url('github_icon.svg') center center no-repeat
+      &.twitter_icon
+        background: url('twitter_icon.svg') center center no-repeat
+      &.linkedin_icon
+        position: relative
+        top: -2px
+        background: url('linkedin_icon.svg') center center no-repeat
+
+
+

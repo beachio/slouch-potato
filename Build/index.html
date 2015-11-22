@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NUWE Integrations </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='stylesheets/main.css'>
+<link rel='stylesheet' href='Build/stylesheets/main.css'>
+<link rel='stylesheet' href='Build/stylesheets/main.css.map'>
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+<section class='main colored'>
+  <div class='main'>
+  <div class='container'>
+    <div class='main-content'>
+      <div class='main-content-text'>
+        <div class='main-content-slogan'>
+          Reward <strong>healthy behaviour</strong>. Prevent unhealthy habits.
+        </div>
+        <div class='main-content-description'>
+          SlouchPotato is a Parental Control Framework which allows you to control your kids access to games and TV shows according to healthy habits
+        </div>
+        <form action='/subscribe-url' data-forge-name='register'>
+          <input data-forge-name='email' name='email' placeholder='Enter email to support our campaign' type='text'>
+          <label>A Framework for Game Developers, Supported by Parents</label>
+        </form>
+      </div>
+      <div class='main-content-image'>
+        <div class='main-logo'>
+          <img class='logo-image' src='images/logo.png'>
+          <div class='beta-badge'>
+            <p class='beta'>CONCEPT</p>
+          </div>
+        </div>
+        <div class='main-image'>
+          <div class='dude-character'>
+            <div class='dude-arm'></div>
+            <div class='dude-arm-left'></div>
+            <div class='dude-eye'></div>
+            <div class='dude-highlight'></div>
+            <div class='screen-highlight'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+  <div class='switch'>
+  <div class='container'>
+    <div class='section-title'>
+      Plug and Play Framework for Game Developers
+    </div>
+    <p class='centered'>
+      Installing and enabling the framework should be easy. No excuses for it not to be an option. Simply add the SlouchPotato SDK to your Xcode Project, install the dependencies, add an outlet and action to load the views.
+    </p>
+    <div class='row centered stack'>
+      <div class='column nw-service'>
+      </div>
+      <div class='column nw-service'>
+      </div>
+      <div class='column nw-service'>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class='colored'>
+  <div class='cta'>
+  <div class='container'>
+    <div class='slogan'>Learn About How It Was Made</div>
+    <a class='btn' href='http://blog.nuwe.co/articles/2015/5/13/healthhack-slouchpotato-game-blocks-for-unhealthy-habits'>Read Article</a>
+    <p class='centered'>A <a href="http://hackbmth.org">Hackbmth</a> Project by <a href="http://twitter.com/r3trosteve">@r3trosteve</a></p>
+  </div>
+</div>
+</section>
+<section>
+  <div class='forge'>
+  <div class='container'>
+    <a class='forge_img' href='https://getforge.com'>
+      <img src='images/forge.png'>
+    </a>
+    <p class='centered'>This product website is powered by <b>Forge</b></p>
+  </div>
+</div>
+</section>
+<section class='colored'>
+  <div class='footer'>
+  <div class='container'>
+    <div class='social_icons'>
+      <a class='github_icon' href='https://github.com/nuwehq'></a>
+      <a class='twitter_icon' href='http://twitter.com/nuwehq'></a>
+      <a class='linkedin_icon' href='https://www.linkedin.com/company/2997882'></a>
+    </div>
+    <div class='links'>
+      <div class='col'>
+        <a href='https://api.nuapi.co/v1/index.html'>Docs</a>
+        <a href='https://github.com/nuwehq'>Resources</a>
+        <a href='http://blog.nuwe.co/roadmap/'>Roadmap</a>
+        <a href='http://blog.nuwe.co/technical-support/'>Technical support</a>
+      </div>
+      <div class='col'>
+        <a href='http://blog.nuwe.co'>Blog</a>
+        <a href='http://blog.nuwe.co/contact-us/'>Contact</a>
+        <a href='http://blog.nuwe.co/team/'>The team</a>
+        <a href='http://blog.nuwe.co/jobs/'>Jobs</a>
+      </div>
+      <div class='col'>
+        <a href='http://blog.nuwe.co/terms-of-use'>Terms of use</a>
+        <a href='http://blog.nuwe.co/privacy-policy'>Privacy Policy</a>
+      </div>
+    </div>
+    <div class='registration_address'>
+      <img src='images/footer_logo.svg'>
+      <br>
+      Nu Wellness Ltd
+      <br>
+      5 Fleet Place
+      <br>
+      London EC4M 7RD
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+    <script src='javascript/plugins.js'></script>
+<script src='Build/javascript/plugins.js'></script>
+    <script src='javascript/main.js'></script>
+<script src='Build/javascript/main.js'></script>
+  </body>
+</html>

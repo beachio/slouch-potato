@@ -1,0 +1,114 @@
+.comparison
+
+  .container
+    padding-left: 6rem
+    padding-right: 6rem
+    +tablet
+      padding-left: 3rem
+      padding-right: 3rem
+    +mobile
+      padding-left: 1rem
+      padding-right: 1rem
+  .column
+    padding: 0
+
+
+  .comparison-logos
+    .spacer
+      +flex(0 0 14rem)
+      width: 14rem
+      margin: 0 1rem 0 2rem
+
+      +mobile
+        +flex(0 0 8rem)
+        width: 8rem
+
+    .comparison-logo
+      +flex(1 0)
+
+      +mobile
+        padding: 0.5rem
+  .comparison-header
+    padding: 1.5rem 0 3rem 0
+    +mobile
+      padding: 0rem 0 1rem 0
+    .comparison-description
+      +light(Rem(24),Rem(34))
+      +mobile
+        +light(Rem(18),Rem(26))
+      +flex(0 0 14rem)
+      width: 14rem
+      margin: 0 1rem 0 2rem
+      text-align: left
+      +mobile
+        +flex(0 0 8rem)
+        width: 8rem
+    .comparison-name
+      +light(Rem(24),Rem(34))
+      +flex(1 0)
+      +mobile
+        +light(Rem(18),Rem(26))
+
+  .support-table
+    margin-bottom: 3rem
+
+    height: Rem(600)
+    overflow-y: scroll
+    +mobile
+      height: Rem(235)
+
+
+
+  .service
+    +flex(0 0 auto)
+    // height: 3rem
+    +justify-content(space-between)
+    padding: 1rem 0
+
+    &:nth-child(2n)
+      background-color: rgba(#D8D8D8, 0.1)
+
+    .support
+      +flex(1 0 auto)
+      +display(flex)
+      +justify-content(center)
+      +align-items(center)
+
+
+      .sad
+        background: url(sad.png) center center no-repeat
+        background-size: 100% 100%
+        +size(Rem(37),Rem(37))
+
+
+      .smiley
+        background: url(smiley.png) center center no-repeat
+        background-size: 100% 100%
+        +size(Rem(37),Rem(37))
+
+
+    .service-name
+      margin: 0 1rem 0 2rem
+      +display(flex)
+      +justify-content(flex-start)
+      +align-items(flex-start)
+
+      +flex(0 0 14rem)
+      width: 14rem
+      +thin(Rem(24),Rem(34))
+      text-align: left
+
+      color: $gray
+
+      +mobile
+        +flex(0 0 8rem)
+        width: 8rem
+        overflow: hidden
+        text-overflow: ellipsis
+
+
+  .btn+.centered
+    +regular(Rem(14), Rem(30))
+    padding: Rem(10) Rem(20) Rem(20)
+    +mobile
+      padding: 0

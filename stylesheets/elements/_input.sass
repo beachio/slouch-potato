@@ -1,0 +1,42 @@
+\::-webkit-input-placeholder
+  color: $placeholder-color
+\::-moz-placeholder
+  color: $placeholder-color
+\:-moz-placeholder
+  color: $placeholder-color
+\:-ms-input-placeholder
+  color: $placeholder-color
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+textarea
+  background: rgba(0,0,0, .1)
+  border-radius: 0.9rem
+  border: none
+  padding: 1.5rem 2.1rem
+  +thin(1.5rem,1.5rem)
+  -webkit-appearance: none
+  outline: none
+  +transition(all .25s ease)
+  width: 100%
+
+  .colored &
+    background: rgba(255,255,255,0)
+    border-radius: 0
+    border-left: 2px solid $white
+    color: $white
+
+
+
+    &::-webkit-input-placeholder
+      color: $placeholder-color-reversed
+    &::-moz-placeholder
+      color: $placeholder-color-reversed
+    &:-moz-placeholder
+      color: $placeholder-color-reversed
+    &:-ms-input-placeholder
+      color: $placeholder-color-reversed
+
+

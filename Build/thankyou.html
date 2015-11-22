@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NUWE Integrations </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='stylesheets/main.css'>
+<link rel='stylesheet' href='Build/stylesheets/main.css'>
+<link rel='stylesheet' href='Build/stylesheets/main.css.map'>
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+<section class='main colored'>
+  <div class='container'>
+  <div class='main-logo'>
+    <div class='logo'>
+      <img src='images/logo.png'>
+    </div>
+  </div>
+  <div class='main-content'>
+    <div class='main-content-text'>
+      <div class='slogan'>
+        Thank You!
+      </div>
+      <div class='subslogan'>
+        We'll be in touch with more information about getting started very soon
+      </div>
+      <a class='current-parent btn' href='index.html'><< Back</a>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+  <div class='forge'>
+  <div class='container'>
+    <a class='forge_img' href='https://getforge.com'>
+      <img src='images/forge.png'>
+    </a>
+    <p class='centered'>This product website is powered by <b>Forge</b></p>
+  </div>
+</div>
+</section>
+<section class='colored'>
+  <div class='footer'>
+  <div class='container'>
+    <div class='social_icons'>
+      <a class='github_icon' href='https://github.com/nuwehq'></a>
+      <a class='twitter_icon' href='http://twitter.com/nuwehq'></a>
+      <a class='linkedin_icon' href='https://www.linkedin.com/company/2997882'></a>
+    </div>
+    <div class='links'>
+      <div class='col'>
+        <a href='https://api.nuapi.co/v1/index.html'>Docs</a>
+        <a href='https://github.com/nuwehq'>Resources</a>
+        <a href='http://blog.nuwe.co/roadmap/'>Roadmap</a>
+        <a href='http://blog.nuwe.co/technical-support/'>Technical support</a>
+      </div>
+      <div class='col'>
+        <a href='http://blog.nuwe.co'>Blog</a>
+        <a href='http://blog.nuwe.co/contact-us/'>Contact</a>
+        <a href='http://blog.nuwe.co/team/'>The team</a>
+        <a href='http://blog.nuwe.co/jobs/'>Jobs</a>
+      </div>
+      <div class='col'>
+        <a href='http://blog.nuwe.co/terms-of-use'>Terms of use</a>
+        <a href='http://blog.nuwe.co/privacy-policy'>Privacy Policy</a>
+      </div>
+    </div>
+    <div class='registration_address'>
+      <img src='images/footer_logo.svg'>
+      <br>
+      Nu Wellness Ltd
+      <br>
+      5 Fleet Place
+      <br>
+      London EC4M 7RD
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+    <script src='javascript/plugins.js'></script>
+<script src='Build/javascript/plugins.js'></script>
+    <script src='javascript/main.js'></script>
+<script src='Build/javascript/main.js'></script>
+  </body>
+</html>

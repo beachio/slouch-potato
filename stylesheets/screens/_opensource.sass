@@ -1,0 +1,21 @@
+.opensource
+  .row
+    .column
+      +flex(1 0 Rem(365))
+      +justify-content(space-around)
+      &.iphone
+        +flex(1 1 Rem(420))
+
+      &:first-child
+        .feature
+          text-align: left
+      &:last-child
+        .feature
+          text-align: right
+      img
+        height: Rem(800)
+      .feature
+        +thin(Rem(32), Rem(40))
+
+  .btn-git
+    margin: 10rem auto

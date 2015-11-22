@@ -1,0 +1,27 @@
+.container
+  .main-logo
+    .logo
+      %img{:src => "<!-- @path logo.png -->"}
+    %img.pipe{:src => "<!-- @path line.png -->"}
+    .devs
+      Developers
+
+    .more
+      Brand or agency?
+      %a{:href => "#"} More information
+
+
+
+  .main-content
+    .main-content-text
+      .slogan
+        At nuwe, we <b>integrate</b> and we <b>integrate</b> with the <b>integrators.</b>
+      .subslogan
+        So quit worrying about it.
+      %form{:action => "/subscribe-url", :data => { :forge_name => "Sign Up"}}
+        %input{:name => "email", :placeholder => "Enter your email for early access", :type => "text", :data => { :forge_name => "Email Address" }}
+      .terms
+        Plans start at $9 per month<br>
+        Find out more about <b>Nuwe developers platform</b>
+    .main-content-image
+      %img{:src => "<!-- @path main-illustration.png -->"}

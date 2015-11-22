@@ -1,0 +1,64 @@
+
+.btn
+  margin: 1rem 0
+  +regular(Rem(18), Rem(34))
+  background-color: transparent
+  border: 1px solid $gray
+  color: #4A4A4A
+  border-radius: Rem(40)
+  display: inline-block
+  padding: Rem(18) Rem(35)
+  cursor: pointer
+  +transition(all .2s ease)
+
+  &:hover
+    background-color: $black
+    border-color: $black
+    color: #fff
+
+  .colored &
+    background-color: transparent
+    border-color: $white
+    color: $white
+    &:hover
+      background-color: $white
+      border: 1px solid $white
+      color: $black
+
+  &.btn-git
+    background-color: $light-gray
+    border-color: $gray
+    padding: 0 .9em
+    +thin(Rem(34), 6rem)
+    vertical-align: middle
+    &:before
+      content: ""
+      position: relative
+      top: -0.3rem
+      display: inline-block
+      margin-right: 1.6rem
+      +size(Rem(64),Rem(64))
+      background: url(git-icon.png) center center no-repeat
+      vertical-align: middle
+
+
+  &.btn-green
+    &:hover
+      background-color: $green
+      border-color: $green
+      color: #fff
+
+    .colored &
+      background-color: transparent
+      border-color: $white
+      color: $white
+      &:hover
+        background-color: $white
+        border: 1px solid $white
+        color: $black
+
+
+
+
+  &.btn-big
+    padding: Rem(45) Rem(75)

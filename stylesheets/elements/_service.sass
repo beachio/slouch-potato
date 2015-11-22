@@ -1,0 +1,30 @@
+.nw-service
+  background: $white
+  background: url(screen2.png)
+  background-size: cover
+  border: 1px solid #D5D5D6
+  width: Rem(300)
+  height: Rem(520)
+  margin: 0.75rem
+  border-radius: 8px
+  +align-items(center)
+  &:first-child
+    background: url(screen1.png)
+    background-size: cover
+  &:last-child
+    background: url(screen3.png)
+    background-size: cover
+  .nw-service-logo
+    height: Rem(110)
+    +display(flex)
+    +justify-content(center)
+    +align-items(center)
+
+  .nw-service-description
+    color: $mid-gray
+    +thin(Rem(13),Rem(20))
+    height: Rem(100)
+
+
+
+

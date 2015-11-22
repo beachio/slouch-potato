@@ -1,0 +1,203 @@
+.main
+  height: 100%
+  height: 100vh
+  min-height: 600px
+  width: 100%
+  width: 100vw
+  color: $white
+  padding: 5vh 0
+  +linear-gradient(240deg, $gradient-colors)
+
+  +display(flex)
+  +flex-flow(column nowrap)
+  +justify-content(flex-start)
+
+  .main-logo
+    +flex(0 0 auto)
+    width: 250px
+    img
+      width: 250px
+    .beta-badge
+      position: absolute
+      right: 100px
+      margin-top: 20px
+      .beta
+        text-align: center
+        padding: 5px 10px
+        background-color: $white
+        border-radius: 5px
+        width: 100px
+        color: $bright-purple
+        right: 0
+
+  .main-content
+    +flex(1 0)
+    min-height: 600px
+    height: 85vh
+    +display(flex)
+    +flex-direction(row)
+    +flex-wrap(nowrap)
+    +justify-content(space-between)
+    padding-bottom: 5vh
+
+    .main-content-text
+      +display(flex)
+      +flex-flow(column nowrap)
+      +justify-content(center)
+      +flex(0 0 55%)
+      padding-right: 1rem
+
+      .main-content-slogan
+        +thin(2.7rem, 4rem)
+      .main-content-subslogan
+        padding: 3rem 0
+        +thin(2.7rem, 4rem)
+      .main-content-description
+        padding: 3rem 0
+        +thin(1.8rem, 2rem)
+
+    .main-content-image
+      +display(flex)
+      +flex-flow(column nowrap)
+      +justify-content(flex-start)
+      padding: 14vh 0 0 3rem
+      text-align: center
+      .main-logo
+        +flex(0 0 auto)
+        width: 100%
+        .logo-image
+          width: 50%
+          left: 25%
+      .main-image
+        max-width: initial
+        height: initial
+        max-height: 100%
+        max-width: 100%
+        padding: 20% 0
+        .dude-character
+          background-image: url(dude_armless.svg)
+          background-repeat: no-repeat
+          width: 500px
+          height: 500px
+          position: relative
+          .dude-highlight
+            position: absolute
+            display: block
+            background-image: url(dude-highlight.svg)
+            background-repeat: no-repeat
+            height: 500px
+            width: 500px
+            left: 228px
+            opacity: 0.3
+            animation: lower 10s ease infinite
+          .dude-arm
+            position: absolute
+            display: block
+            background-image: url(dude_arm.svg)
+            background-repeat: no-repeat
+            width: 100px
+            height: 60px
+            left: 137px
+            top: 190px
+            animation: rotate 10s ease infinite
+          .dude-arm-left
+            position: absolute
+            display: block
+            background-image: url(dude_arm_2.svg)
+            background-repeat: no-repeat
+            width: 60px
+            height: 160px
+            left: 357px
+            top: 205px
+            animation: sway 10s ease infinite
+          .dude-eye
+            position: absolute
+            display: block
+            background-image: url(dude-eye.svg)
+            background-repeat: no-repeat
+            width: 60px
+            height: 160px
+            left: 277px
+            top: 85px
+            animation: roll 10s ease infinite
+          .screen-highlight
+            position: absolute
+            display: block
+            background-image: url(screen-light.svg)
+            background-repeat: no-repeat
+            width: 500px
+            height: 500px
+            left: 112px
+            top: 162px
+            opacity: 0.3
+            animation: lower 10s linear infinite
+
+
+@keyframes rotate 
+  0%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(0deg)
+  25%
+    transform: rotateZ(-4deg)
+  35%
+    transform: rotateZ(-4deg)
+  38%
+    transform: rotateZ(2deg)
+  42% 
+    transform: rotateZ(2deg)
+  45%
+    transform: rotateZ(-4deg)
+  50%
+    transform: rotateZ(0deg)
+  70% 
+    transform: rotateZ(0deg)
+  82%
+    transform: rotateZ(0deg)
+  85%
+    transform: rotateZ(4deg)
+  90%
+    transform: rotateZ(4deg)
+  100%
+    transform: rotateZ(0deg)
+
+
+@keyframes sway
+  0%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(0deg)
+  25%
+    transform: rotateZ(4deg)
+  45%
+    transform: rotateZ(4deg)
+  50%
+    transform: rotateZ(0deg)
+  70%
+    transform: rotateZ(0deg)
+  75%
+    transform: rotateZ(-4deg)
+  90%
+    transform: rotateZ(-4deg)
+  100%
+    transform: rotateZ(0deg)
+
+
+@keyframes flicker
+  50%
+    opacity: 0.3
+  50.001%
+    opacity: 0.1
+
+  /* Keep off state for a short period */
+
+  52.999%
+    opacity: 0.1
+  53%
+  opacity: 0.3
+
+@keyframes lower
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100%
+    opacity: 0.4
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999%
+    opacity: 0.1
